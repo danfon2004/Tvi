@@ -1,0 +1,2893 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_57a1cc312fa6ba37c987f2651bc4bf22 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <h3 align="center" style="font-size:16px"><b>Relaciones entre Empresas Globales</b></h3>
+    <p align="center">Grosor de línea = Correlación de precios (90 días)</p>
+    
+    
+            <div class="folium-map" id="map_57a1cc312fa6ba37c987f2651bc4bf22" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_57a1cc312fa6ba37c987f2651bc4bf22 = L.map(
+                "map_57a1cc312fa6ba37c987f2651bc4bf22",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b95ad2db8efe9b7a5e84d02322e391c9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b95ad2db8efe9b7a5e84d02322e391c9.addTo(map_57a1cc312fa6ba37c987f2651bc4bf22);
+        
+    
+            var feature_group_a16ba635d411db9b89e8512504aa561a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_fa179de39c886ceddb66e08baa08aea0 = L.polyline(
+                [[37.2633325, 127.0287472], [19.054999, 72.8692035]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.836926121651589}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+        var popup_bec9244e059684e78e73103fbc54f31f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_76dd164d4712d54f7e5ac5904d29d1d1 = $(`<div id="html_76dd164d4712d54f7e5ac5904d29d1d1" style="width: 100.0%; height: 100.0%;">Correlación 005930.KS-TCS.NS: 0.57</div>`)[0];
+                popup_bec9244e059684e78e73103fbc54f31f.setContent(html_76dd164d4712d54f7e5ac5904d29d1d1);
+            
+        
+
+        poly_line_fa179de39c886ceddb66e08baa08aea0.bindPopup(popup_bec9244e059684e78e73103fbc54f31f)
+        ;
+
+        
+    
+    
+            var poly_line_3725c28a3bceefea42806eb992970743 = L.polyline(
+                [[37.2633325, 127.0287472], [47.6694141, -122.1238767]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 0.13988749183128102}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+        var popup_109caca5ac960acd611954bee121fba6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_48f8c248e83cd0138f7391f9b8b88ade = $(`<div id="html_48f8c248e83cd0138f7391f9b8b88ade" style="width: 100.0%; height: 100.0%;">Correlación 005930.KS-MSFT: 0.03</div>`)[0];
+                popup_109caca5ac960acd611954bee121fba6.setContent(html_48f8c248e83cd0138f7391f9b8b88ade);
+            
+        
+
+        poly_line_3725c28a3bceefea42806eb992970743.bindPopup(popup_109caca5ac960acd611954bee121fba6)
+        ;
+
+        
+    
+    
+            var poly_line_2a21993ef0e02d7a23d75b31e74df5a7 = L.polyline(
+                [[37.2633325, 127.0287472], [37.3541132, -121.955174]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 0.9061285097653194}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+        var popup_ab957529398b6d1932a0735fc22b8548 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6872ae4e9bb22d13ab97fb01f0aa41d7 = $(`<div id="html_6872ae4e9bb22d13ab97fb01f0aa41d7" style="width: 100.0%; height: 100.0%;">Correlación 005930.KS-NVDA: 0.18</div>`)[0];
+                popup_ab957529398b6d1932a0735fc22b8548.setContent(html_6872ae4e9bb22d13ab97fb01f0aa41d7);
+            
+        
+
+        poly_line_2a21993ef0e02d7a23d75b31e74df5a7.bindPopup(popup_ab957529398b6d1932a0735fc22b8548)
+        ;
+
+        
+    
+    
+            var poly_line_68ebf8cb3031ebaf18ae874fcc9ad42f = L.polyline(
+                [[37.2633325, 127.0287472], [37.3228934, -122.0322895]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3.00911288810663}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+        var popup_f4828925f8435ea866298a30429922e7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d2840f5939c1ba8592fbfc2ed8eb119 = $(`<div id="html_7d2840f5939c1ba8592fbfc2ed8eb119" style="width: 100.0%; height: 100.0%;">Correlación 005930.KS-AAPL: 0.60</div>`)[0];
+                popup_f4828925f8435ea866298a30429922e7.setContent(html_7d2840f5939c1ba8592fbfc2ed8eb119);
+            
+        
+
+        poly_line_68ebf8cb3031ebaf18ae874fcc9ad42f.bindPopup(popup_f4828925f8435ea866298a30429922e7)
+        ;
+
+        
+    
+    
+            var poly_line_4bb9528b4afcc168ed827f412b8d4b42 = L.polyline(
+                [[37.2633325, 127.0287472], [51.4190691, 5.4045572]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.1422401762633476}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+        var popup_f86c6515fd876ad860e3b9fed4b7a828 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6b2e5d284a413d2863b077ac0fd05483 = $(`<div id="html_6b2e5d284a413d2863b077ac0fd05483" style="width: 100.0%; height: 100.0%;">Correlación 005930.KS-ASML.AS: 0.43</div>`)[0];
+                popup_f86c6515fd876ad860e3b9fed4b7a828.setContent(html_6b2e5d284a413d2863b077ac0fd05483);
+            
+        
+
+        poly_line_4bb9528b4afcc168ed827f412b8d4b42.bindPopup(popup_f86c6515fd876ad860e3b9fed4b7a828)
+        ;
+
+        
+    
+    
+            var poly_line_32eb756c81dfa3023204c7c1a9e26a60 = L.polyline(
+                [[19.054999, 72.8692035], [47.6694141, -122.1238767]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5204440561457067}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+        var popup_3fde9d571397adcc6d0bf82905425a7c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6dbfeb937d46f82137301c8f995526d4 = $(`<div id="html_6dbfeb937d46f82137301c8f995526d4" style="width: 100.0%; height: 100.0%;">Correlación TCS.NS-MSFT: 0.30</div>`)[0];
+                popup_3fde9d571397adcc6d0bf82905425a7c.setContent(html_6dbfeb937d46f82137301c8f995526d4);
+            
+        
+
+        poly_line_32eb756c81dfa3023204c7c1a9e26a60.bindPopup(popup_3fde9d571397adcc6d0bf82905425a7c)
+        ;
+
+        
+    
+    
+            var poly_line_90643e179009288dd85060bd47213b1a = L.polyline(
+                [[19.054999, 72.8692035], [37.3541132, -121.955174]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.0918071112010685}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+        var popup_a38f4a1844207a8d177cf2c8c93a0ac0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2c7c760fbdc167721db22a810249ba9f = $(`<div id="html_2c7c760fbdc167721db22a810249ba9f" style="width: 100.0%; height: 100.0%;">Correlación TCS.NS-NVDA: 0.42</div>`)[0];
+                popup_a38f4a1844207a8d177cf2c8c93a0ac0.setContent(html_2c7c760fbdc167721db22a810249ba9f);
+            
+        
+
+        poly_line_90643e179009288dd85060bd47213b1a.bindPopup(popup_a38f4a1844207a8d177cf2c8c93a0ac0)
+        ;
+
+        
+    
+    
+            var poly_line_138c5a0bf56c40a65f146f8687407bf9 = L.polyline(
+                [[19.054999, 72.8692035], [37.3228934, -122.0322895]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3.885800467199002}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+        var popup_6657c4745bb38586ab742bbecec34e00 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5be8725bb1e37a8e1e79d6cf5e527038 = $(`<div id="html_5be8725bb1e37a8e1e79d6cf5e527038" style="width: 100.0%; height: 100.0%;">Correlación TCS.NS-AAPL: 0.78</div>`)[0];
+                popup_6657c4745bb38586ab742bbecec34e00.setContent(html_5be8725bb1e37a8e1e79d6cf5e527038);
+            
+        
+
+        poly_line_138c5a0bf56c40a65f146f8687407bf9.bindPopup(popup_6657c4745bb38586ab742bbecec34e00)
+        ;
+
+        
+    
+    
+            var poly_line_03b0ef34e1e7cc7bed0366194f9b70f7 = L.polyline(
+                [[19.054999, 72.8692035], [51.4190691, 5.4045572]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3.73192655154015}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+        var popup_f29539fb42d3d28c5b0bd750d356ec85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c807746ac61185d31df66409c337d212 = $(`<div id="html_c807746ac61185d31df66409c337d212" style="width: 100.0%; height: 100.0%;">Correlación TCS.NS-ASML.AS: 0.75</div>`)[0];
+                popup_f29539fb42d3d28c5b0bd750d356ec85.setContent(html_c807746ac61185d31df66409c337d212);
+            
+        
+
+        poly_line_03b0ef34e1e7cc7bed0366194f9b70f7.bindPopup(popup_f29539fb42d3d28c5b0bd750d356ec85)
+        ;
+
+        
+    
+    
+            var poly_line_24ab5d267c1f186fd37d1c463865e9e0 = L.polyline(
+                [[47.6694141, -122.1238767], [37.3541132, -121.955174]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4.621630350201581}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+        var popup_119c46a64d0d28f6e658ea1b0781631c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_89aadfc60a2f0e6d39b82a7b96f7a6a5 = $(`<div id="html_89aadfc60a2f0e6d39b82a7b96f7a6a5" style="width: 100.0%; height: 100.0%;">Correlación MSFT-NVDA: 0.92</div>`)[0];
+                popup_119c46a64d0d28f6e658ea1b0781631c.setContent(html_89aadfc60a2f0e6d39b82a7b96f7a6a5);
+            
+        
+
+        poly_line_24ab5d267c1f186fd37d1c463865e9e0.bindPopup(popup_119c46a64d0d28f6e658ea1b0781631c)
+        ;
+
+        
+    
+    
+            var poly_line_d536d41f34edd054f2e08cfe14cbee0d = L.polyline(
+                [[47.6694141, -122.1238767], [37.3228934, -122.0322895]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 0.12615187418358068}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+        var popup_9b809e1834aa9c2eb3c3bcb05c1f41be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff14bf88481422f32c7e3fe2e2c1f0ee = $(`<div id="html_ff14bf88481422f32c7e3fe2e2c1f0ee" style="width: 100.0%; height: 100.0%;">Correlación MSFT-AAPL: 0.03</div>`)[0];
+                popup_9b809e1834aa9c2eb3c3bcb05c1f41be.setContent(html_ff14bf88481422f32c7e3fe2e2c1f0ee);
+            
+        
+
+        poly_line_d536d41f34edd054f2e08cfe14cbee0d.bindPopup(popup_9b809e1834aa9c2eb3c3bcb05c1f41be)
+        ;
+
+        
+    
+    
+            var poly_line_503dc71339f19588dc001efe45623dc1 = L.polyline(
+                [[47.6694141, -122.1238767], [51.4190691, 5.4045572]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3.278731773186809}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+        var popup_80a5a1a03fda67c5dcd7167cc483673f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2c96ec7493bebe6c1f826914ec07e58f = $(`<div id="html_2c96ec7493bebe6c1f826914ec07e58f" style="width: 100.0%; height: 100.0%;">Correlación MSFT-ASML.AS: 0.66</div>`)[0];
+                popup_80a5a1a03fda67c5dcd7167cc483673f.setContent(html_2c96ec7493bebe6c1f826914ec07e58f);
+            
+        
+
+        poly_line_503dc71339f19588dc001efe45623dc1.bindPopup(popup_80a5a1a03fda67c5dcd7167cc483673f)
+        ;
+
+        
+    
+    
+            var poly_line_addd0effee9103eed965980dbf2897e7 = L.polyline(
+                [[37.3541132, -121.955174], [37.3228934, -122.0322895]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 0.7682415812012239}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+        var popup_52034b6d87330cc9cba3818c50a096f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_353e3522f1cfd5d58e4a3b3133e33885 = $(`<div id="html_353e3522f1cfd5d58e4a3b3133e33885" style="width: 100.0%; height: 100.0%;">Correlación NVDA-AAPL: 0.15</div>`)[0];
+                popup_52034b6d87330cc9cba3818c50a096f6.setContent(html_353e3522f1cfd5d58e4a3b3133e33885);
+            
+        
+
+        poly_line_addd0effee9103eed965980dbf2897e7.bindPopup(popup_52034b6d87330cc9cba3818c50a096f6)
+        ;
+
+        
+    
+    
+            var poly_line_61c0fcebe3c7b134e42c367454519eec = L.polyline(
+                [[37.3541132, -121.955174], [51.4190691, 5.4045572]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4.0658242608328745}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+        var popup_905ee1f06c813d2398e29a70ea84cd5b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74c8d51426ce62d31d8e7d069ed0bb05 = $(`<div id="html_74c8d51426ce62d31d8e7d069ed0bb05" style="width: 100.0%; height: 100.0%;">Correlación NVDA-ASML.AS: 0.81</div>`)[0];
+                popup_905ee1f06c813d2398e29a70ea84cd5b.setContent(html_74c8d51426ce62d31d8e7d069ed0bb05);
+            
+        
+
+        poly_line_61c0fcebe3c7b134e42c367454519eec.bindPopup(popup_905ee1f06c813d2398e29a70ea84cd5b)
+        ;
+
+        
+    
+    
+            var poly_line_2fe929c6ca9e945b228554bbe6de3fe5 = L.polyline(
+                [[37.3228934, -122.0322895], [51.4190691, 5.4045572]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.3299078264420587}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+        var popup_587c73d7d4020708b98e6d1b00e86800 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1b7724cda09242bff8c85c40cc499df = $(`<div id="html_a1b7724cda09242bff8c85c40cc499df" style="width: 100.0%; height: 100.0%;">Correlación AAPL-ASML.AS: 0.47</div>`)[0];
+                popup_587c73d7d4020708b98e6d1b00e86800.setContent(html_a1b7724cda09242bff8c85c40cc499df);
+            
+        
+
+        poly_line_2fe929c6ca9e945b228554bbe6de3fe5.bindPopup(popup_587c73d7d4020708b98e6d1b00e86800)
+        ;
+
+        
+    
+    
+            var marker_308d15043858bf915b6a871bd93f46a8 = L.marker(
+                [37.2633325, 127.0287472],
+                {
+}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+            var icon_0fac9d126680a4885284712029ffefb6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_5128e58b39af43c9cd08a6ce233db049 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f1d7f58b18c223b553964209950ed668 = $(`<div id="html_f1d7f58b18c223b553964209950ed668" style="width: 100.0%; height: 100.0%;">             <b>SamsungElec (005930.KS)</b><br>             <b>Sector:</b> Technology<br>             <b>País:</b> South Korea<br>             <b>Capitalización:</b> $389425.39 B<br>             <b>Variación (30d):</b> 3.82%             </div>`)[0];
+                popup_5128e58b39af43c9cd08a6ce233db049.setContent(html_f1d7f58b18c223b553964209950ed668);
+            
+        
+
+        marker_308d15043858bf915b6a871bd93f46a8.bindPopup(popup_5128e58b39af43c9cd08a6ce233db049)
+        ;
+
+        
+    
+    
+            marker_308d15043858bf915b6a871bd93f46a8.bindTooltip(
+                `<div>
+                     005930.KS - Technology
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_308d15043858bf915b6a871bd93f46a8.setIcon(icon_0fac9d126680a4885284712029ffefb6);
+            
+    
+            var marker_0cf18677d69ae3075e9d4d4f541d8db5 = L.marker(
+                [19.054999, 72.8692035],
+                {
+}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+            var icon_021fe5d61dfc9587e8027557efaac781 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_a1467ed3457c02309765b52a72440efb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e05eab4c663cf2810d7f6bd95c2a6b77 = $(`<div id="html_e05eab4c663cf2810d7f6bd95c2a6b77" style="width: 100.0%; height: 100.0%;">             <b>TATA CONSULTANCY SERV LT (TCS.NS)</b><br>             <b>Sector:</b> Technology<br>             <b>País:</b> India<br>             <b>Capitalización:</b> $12380.74 B<br>             <b>Variación (30d):</b> -4.64%             </div>`)[0];
+                popup_a1467ed3457c02309765b52a72440efb.setContent(html_e05eab4c663cf2810d7f6bd95c2a6b77);
+            
+        
+
+        marker_0cf18677d69ae3075e9d4d4f541d8db5.bindPopup(popup_a1467ed3457c02309765b52a72440efb)
+        ;
+
+        
+    
+    
+            marker_0cf18677d69ae3075e9d4d4f541d8db5.bindTooltip(
+                `<div>
+                     TCS.NS - Technology
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0cf18677d69ae3075e9d4d4f541d8db5.setIcon(icon_021fe5d61dfc9587e8027557efaac781);
+            
+    
+            var marker_ccecaf934a76598dfb817b2c9ee8be44 = L.marker(
+                [47.6694141, -122.1238767],
+                {
+}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+            var icon_cd15eeaca20b4b2b6a31ceabfa35a8ff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_6b5d8bcf69ebeb250863a547ec475365 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a6eb004f0258994a7458ab97e49ca571 = $(`<div id="html_a6eb004f0258994a7458ab97e49ca571" style="width: 100.0%; height: 100.0%;">             <b>Microsoft Corporation (MSFT)</b><br>             <b>Sector:</b> Technology<br>             <b>País:</b> United States<br>             <b>Capitalización:</b> $3513.73 B<br>             <b>Variación (30d):</b> 5.42%             </div>`)[0];
+                popup_6b5d8bcf69ebeb250863a547ec475365.setContent(html_a6eb004f0258994a7458ab97e49ca571);
+            
+        
+
+        marker_ccecaf934a76598dfb817b2c9ee8be44.bindPopup(popup_6b5d8bcf69ebeb250863a547ec475365)
+        ;
+
+        
+    
+    
+            marker_ccecaf934a76598dfb817b2c9ee8be44.bindTooltip(
+                `<div>
+                     MSFT - Technology
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ccecaf934a76598dfb817b2c9ee8be44.setIcon(icon_cd15eeaca20b4b2b6a31ceabfa35a8ff);
+            
+    
+            var marker_c84682dc57000bd3525cfa2f43ab1154 = L.marker(
+                [37.3541132, -121.955174],
+                {
+}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+            var icon_1293f9053e6602507a7beb4d60d4614e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_5a4a7cd7f69455b7d2d88928f846815a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_278d65da2ce848ac2ee98ca843345aec = $(`<div id="html_278d65da2ce848ac2ee98ca843345aec" style="width: 100.0%; height: 100.0%;">             <b>NVIDIA Corporation (NVDA)</b><br>             <b>Sector:</b> Technology<br>             <b>País:</b> United States<br>             <b>Capitalización:</b> $3478.40 B<br>             <b>Variación (30d):</b> 15.96%             </div>`)[0];
+                popup_5a4a7cd7f69455b7d2d88928f846815a.setContent(html_278d65da2ce848ac2ee98ca843345aec);
+            
+        
+
+        marker_c84682dc57000bd3525cfa2f43ab1154.bindPopup(popup_5a4a7cd7f69455b7d2d88928f846815a)
+        ;
+
+        
+    
+    
+            marker_c84682dc57000bd3525cfa2f43ab1154.bindTooltip(
+                `<div>
+                     NVDA - Technology
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c84682dc57000bd3525cfa2f43ab1154.setIcon(icon_1293f9053e6602507a7beb4d60d4614e);
+            
+    
+            var marker_aec9f1c60f3ebaa2e3227fa0ec6a2edb = L.marker(
+                [37.3228934, -122.0322895],
+                {
+}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+            var icon_fdc5b544508c1a5e23bbfc353909609a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_f5184b741690ee1f824d0f5a807d5f70 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_214a32366ebc7303fa146876af35177f = $(`<div id="html_214a32366ebc7303fa146876af35177f" style="width: 100.0%; height: 100.0%;">             <b>Apple Inc. (AAPL)</b><br>             <b>Sector:</b> Technology<br>             <b>País:</b> United States<br>             <b>Capitalización:</b> $3008.82 B<br>             <b>Variación (30d):</b> -4.43%             </div>`)[0];
+                popup_f5184b741690ee1f824d0f5a807d5f70.setContent(html_214a32366ebc7303fa146876af35177f);
+            
+        
+
+        marker_aec9f1c60f3ebaa2e3227fa0ec6a2edb.bindPopup(popup_f5184b741690ee1f824d0f5a807d5f70)
+        ;
+
+        
+    
+    
+            marker_aec9f1c60f3ebaa2e3227fa0ec6a2edb.bindTooltip(
+                `<div>
+                     AAPL - Technology
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aec9f1c60f3ebaa2e3227fa0ec6a2edb.setIcon(icon_fdc5b544508c1a5e23bbfc353909609a);
+            
+    
+            var marker_cac1397f8bfaf92cb624517da6eef863 = L.marker(
+                [51.4190691, 5.4045572],
+                {
+}
+            ).addTo(feature_group_a16ba635d411db9b89e8512504aa561a);
+        
+    
+            var icon_bc163f991e76dd83dad6e81128fa8d9f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_8fe13309f7589455c82166f017ad51f4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f58548d5fc3a9aefce0930204afddfa5 = $(`<div id="html_f58548d5fc3a9aefce0930204afddfa5" style="width: 100.0%; height: 100.0%;">             <b>ASML HOLDING (ASML.AS)</b><br>             <b>Sector:</b> Technology<br>             <b>País:</b> Netherlands<br>             <b>Capitalización:</b> $267.42 B<br>             <b>Variación (30d):</b> 1.98%             </div>`)[0];
+                popup_8fe13309f7589455c82166f017ad51f4.setContent(html_f58548d5fc3a9aefce0930204afddfa5);
+            
+        
+
+        marker_cac1397f8bfaf92cb624517da6eef863.bindPopup(popup_8fe13309f7589455c82166f017ad51f4)
+        ;
+
+        
+    
+    
+            marker_cac1397f8bfaf92cb624517da6eef863.bindTooltip(
+                `<div>
+                     ASML.AS - Technology
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cac1397f8bfaf92cb624517da6eef863.setIcon(icon_bc163f991e76dd83dad6e81128fa8d9f);
+            
+    
+            feature_group_a16ba635d411db9b89e8512504aa561a.addTo(map_57a1cc312fa6ba37c987f2651bc4bf22);
+        
+    
+            var feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_022e2b9a283cc0861ec5dc7078bc68ff = L.polyline(
+                [[35.0834524, 137.156737], [47.6038321, -122.330062]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3.3519453069101592}
+            ).addTo(feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38);
+        
+    
+        var popup_79433d8ce2499f83dc8478bedeb6777f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d028d61d6a479b4eecfadbdb34735211 = $(`<div id="html_d028d61d6a479b4eecfadbdb34735211" style="width: 100.0%; height: 100.0%;">Correlación 7203.T-AMZN: 0.67</div>`)[0];
+                popup_79433d8ce2499f83dc8478bedeb6777f.setContent(html_d028d61d6a479b4eecfadbdb34735211);
+            
+        
+
+        poly_line_022e2b9a283cc0861ec5dc7078bc68ff.bindPopup(popup_79433d8ce2499f83dc8478bedeb6777f)
+        ;
+
+        
+    
+    
+            var poly_line_e4a2c89c2b611cba9fbdc9bbfdf25917 = L.polyline(
+                [[35.0834524, 137.156737], [30.2711286, -97.7436995]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.726781360291427}
+            ).addTo(feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38);
+        
+    
+        var popup_0e498059c67e628b7b35cd2714322c44 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b174945eb51f1716da3d716f03bc58d = $(`<div id="html_8b174945eb51f1716da3d716f03bc58d" style="width: 100.0%; height: 100.0%;">Correlación 7203.T-TSLA: 0.35</div>`)[0];
+                popup_0e498059c67e628b7b35cd2714322c44.setContent(html_8b174945eb51f1716da3d716f03bc58d);
+            
+        
+
+        poly_line_e4a2c89c2b611cba9fbdc9bbfdf25917.bindPopup(popup_0e498059c67e628b7b35cd2714322c44)
+        ;
+
+        
+    
+    
+            var poly_line_daa90a2b379d6b80cceced44ad7775dc = L.polyline(
+                [[35.0834524, 137.156737], [30.2489634, 120.2052342]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3.5350227238925}
+            ).addTo(feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38);
+        
+    
+        var popup_ae576054f6e86238f77ae89be3df346c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2ea773888e24443caf31b5148456c273 = $(`<div id="html_2ea773888e24443caf31b5148456c273" style="width: 100.0%; height: 100.0%;">Correlación 7203.T-BABA: 0.71</div>`)[0];
+                popup_ae576054f6e86238f77ae89be3df346c.setContent(html_2ea773888e24443caf31b5148456c273);
+            
+        
+
+        poly_line_daa90a2b379d6b80cceced44ad7775dc.bindPopup(popup_ae576054f6e86238f77ae89be3df346c)
+        ;
+
+        
+    
+    
+            var poly_line_1d3e6467d69343bde80d93c57bfbdca9 = L.polyline(
+                [[35.0834524, 137.156737], [48.1371079, 11.5753822]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4.1572010208043455}
+            ).addTo(feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38);
+        
+    
+        var popup_1a3903f3e67c80672dcba3146c24f729 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d2cae9434f7019c8da6e418ca5c52d07 = $(`<div id="html_d2cae9434f7019c8da6e418ca5c52d07" style="width: 100.0%; height: 100.0%;">Correlación 7203.T-BMW.DE: 0.83</div>`)[0];
+                popup_1a3903f3e67c80672dcba3146c24f729.setContent(html_d2cae9434f7019c8da6e418ca5c52d07);
+            
+        
+
+        poly_line_1d3e6467d69343bde80d93c57bfbdca9.bindPopup(popup_1a3903f3e67c80672dcba3146c24f729)
+        ;
+
+        
+    
+    
+            var poly_line_6a9dcce70645eb962f713e9daca96ddf = L.polyline(
+                [[47.6038321, -122.330062], [30.2711286, -97.7436995]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3.6182145332214133}
+            ).addTo(feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38);
+        
+    
+        var popup_16b11d128450fb1b2f9113f50b90171a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1da5332e24e04aa052994f5679f515a9 = $(`<div id="html_1da5332e24e04aa052994f5679f515a9" style="width: 100.0%; height: 100.0%;">Correlación AMZN-TSLA: 0.72</div>`)[0];
+                popup_16b11d128450fb1b2f9113f50b90171a.setContent(html_1da5332e24e04aa052994f5679f515a9);
+            
+        
+
+        poly_line_6a9dcce70645eb962f713e9daca96ddf.bindPopup(popup_16b11d128450fb1b2f9113f50b90171a)
+        ;
+
+        
+    
+    
+            var poly_line_9c92de39313aaf8ee31f28143d573d2e = L.polyline(
+                [[47.6038321, -122.330062], [30.2489634, 120.2052342]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.3074503220468943}
+            ).addTo(feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38);
+        
+    
+        var popup_fecd5f27e2153e446459e759c150f2a8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5945ca1d73b9340e9fa95fda5704f5b5 = $(`<div id="html_5945ca1d73b9340e9fa95fda5704f5b5" style="width: 100.0%; height: 100.0%;">Correlación AMZN-BABA: 0.46</div>`)[0];
+                popup_fecd5f27e2153e446459e759c150f2a8.setContent(html_5945ca1d73b9340e9fa95fda5704f5b5);
+            
+        
+
+        poly_line_9c92de39313aaf8ee31f28143d573d2e.bindPopup(popup_fecd5f27e2153e446459e759c150f2a8)
+        ;
+
+        
+    
+    
+            var poly_line_8dbb355392e4ffb0de6c25a1db4ed3a3 = L.polyline(
+                [[47.6038321, -122.330062], [48.1371079, 11.5753822]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3.4479137292703363}
+            ).addTo(feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38);
+        
+    
+        var popup_cdf6d67213a049d12dd0d359940f3ac0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_69136acd16133d49f34ebe9bd55793a3 = $(`<div id="html_69136acd16133d49f34ebe9bd55793a3" style="width: 100.0%; height: 100.0%;">Correlación AMZN-BMW.DE: 0.69</div>`)[0];
+                popup_cdf6d67213a049d12dd0d359940f3ac0.setContent(html_69136acd16133d49f34ebe9bd55793a3);
+            
+        
+
+        poly_line_8dbb355392e4ffb0de6c25a1db4ed3a3.bindPopup(popup_cdf6d67213a049d12dd0d359940f3ac0)
+        ;
+
+        
+    
+    
+            var poly_line_0d5310cd978836bf0bd0de9cb9db021c = L.polyline(
+                [[30.2711286, -97.7436995], [30.2489634, 120.2052342]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 0.33074980803295545}
+            ).addTo(feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38);
+        
+    
+        var popup_ac06f560b6b69397e1e09acdc58a0d59 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2ec78cfbefadd9fabd058e78ae56b85f = $(`<div id="html_2ec78cfbefadd9fabd058e78ae56b85f" style="width: 100.0%; height: 100.0%;">Correlación TSLA-BABA: 0.07</div>`)[0];
+                popup_ac06f560b6b69397e1e09acdc58a0d59.setContent(html_2ec78cfbefadd9fabd058e78ae56b85f);
+            
+        
+
+        poly_line_0d5310cd978836bf0bd0de9cb9db021c.bindPopup(popup_ac06f560b6b69397e1e09acdc58a0d59)
+        ;
+
+        
+    
+    
+            var poly_line_7faa7b06b1ac1f1317a97de65784df08 = L.polyline(
+                [[30.2711286, -97.7436995], [48.1371079, 11.5753822]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.4167318285481378}
+            ).addTo(feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38);
+        
+    
+        var popup_bef5222112d861f814a14f79b7dc2553 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9f3f7faf12042d1b28e666a56e093ae6 = $(`<div id="html_9f3f7faf12042d1b28e666a56e093ae6" style="width: 100.0%; height: 100.0%;">Correlación TSLA-BMW.DE: 0.28</div>`)[0];
+                popup_bef5222112d861f814a14f79b7dc2553.setContent(html_9f3f7faf12042d1b28e666a56e093ae6);
+            
+        
+
+        poly_line_7faa7b06b1ac1f1317a97de65784df08.bindPopup(popup_bef5222112d861f814a14f79b7dc2553)
+        ;
+
+        
+    
+    
+            var poly_line_d60ca23badae091bd17b13d44b82f5da = L.polyline(
+                [[30.2489634, 120.2052342], [48.1371079, 11.5753822]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4.025878041032488}
+            ).addTo(feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38);
+        
+    
+        var popup_d47330001bb7263f2960e9d403ce0c39 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_129ce0726f09f0438a5d1616a0f90499 = $(`<div id="html_129ce0726f09f0438a5d1616a0f90499" style="width: 100.0%; height: 100.0%;">Correlación BABA-BMW.DE: 0.81</div>`)[0];
+                popup_d47330001bb7263f2960e9d403ce0c39.setContent(html_129ce0726f09f0438a5d1616a0f90499);
+            
+        
+
+        poly_line_d60ca23badae091bd17b13d44b82f5da.bindPopup(popup_d47330001bb7263f2960e9d403ce0c39)
+        ;
+
+        
+    
+    
+            var marker_14f61203e7042ab9c47af73e0e4eb346 = L.marker(
+                [35.0834524, 137.156737],
+                {
+}
+            ).addTo(feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38);
+        
+    
+            var icon_328a2c997d9d232a70ef420b0e4fae09 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_343001496e6ae12843bf95a00c0ba395 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3701c4b818161885d4c4761cd1bd639 = $(`<div id="html_a3701c4b818161885d4c4761cd1bd639" style="width: 100.0%; height: 100.0%;">             <b>TOYOTA MOTOR CORP (7203.T)</b><br>             <b>Sector:</b> Consumer Cyclical<br>             <b>País:</b> Japan<br>             <b>Capitalización:</b> $34562.62 B<br>             <b>Variación (30d):</b> -4.12%             </div>`)[0];
+                popup_343001496e6ae12843bf95a00c0ba395.setContent(html_a3701c4b818161885d4c4761cd1bd639);
+            
+        
+
+        marker_14f61203e7042ab9c47af73e0e4eb346.bindPopup(popup_343001496e6ae12843bf95a00c0ba395)
+        ;
+
+        
+    
+    
+            marker_14f61203e7042ab9c47af73e0e4eb346.bindTooltip(
+                `<div>
+                     7203.T - Consumer Cyclical
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_14f61203e7042ab9c47af73e0e4eb346.setIcon(icon_328a2c997d9d232a70ef420b0e4fae09);
+            
+    
+            var marker_77f9c224711352621e1048bdc1a86a4e = L.marker(
+                [47.6038321, -122.330062],
+                {
+}
+            ).addTo(feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38);
+        
+    
+            var icon_de4738fd39d4fe20c5ae2e8532bd2158 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_3e96660a1caae7c656eb56b3c0daa0f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_59f64349700da11648bd6c7135f17315 = $(`<div id="html_59f64349700da11648bd6c7135f17315" style="width: 100.0%; height: 100.0%;">             <b>Amazon.com, Inc. (AMZN)</b><br>             <b>Sector:</b> Consumer Cyclical<br>             <b>País:</b> United States<br>             <b>Capitalización:</b> $2303.55 B<br>             <b>Variación (30d):</b> 4.00%             </div>`)[0];
+                popup_3e96660a1caae7c656eb56b3c0daa0f6.setContent(html_59f64349700da11648bd6c7135f17315);
+            
+        
+
+        marker_77f9c224711352621e1048bdc1a86a4e.bindPopup(popup_3e96660a1caae7c656eb56b3c0daa0f6)
+        ;
+
+        
+    
+    
+            marker_77f9c224711352621e1048bdc1a86a4e.bindTooltip(
+                `<div>
+                     AMZN - Consumer Cyclical
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_77f9c224711352621e1048bdc1a86a4e.setIcon(icon_de4738fd39d4fe20c5ae2e8532bd2158);
+            
+    
+            var marker_0e1bc4619548dd7552392186ecebea49 = L.marker(
+                [30.2711286, -97.7436995],
+                {
+}
+            ).addTo(feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38);
+        
+    
+            var icon_c9fcba065cc57e301a8c521bcaba353c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_a6eb6f3fe4ac5a840f6edc1acacb9eb4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_781149aaabfab0dde5dcfb375880af5c = $(`<div id="html_781149aaabfab0dde5dcfb375880af5c" style="width: 100.0%; height: 100.0%;">             <b>Tesla, Inc. (TSLA)</b><br>             <b>Sector:</b> Consumer Cyclical<br>             <b>País:</b> United States<br>             <b>Capitalización:</b> $993.92 B<br>             <b>Variación (30d):</b> -3.08%             </div>`)[0];
+                popup_a6eb6f3fe4ac5a840f6edc1acacb9eb4.setContent(html_781149aaabfab0dde5dcfb375880af5c);
+            
+        
+
+        marker_0e1bc4619548dd7552392186ecebea49.bindPopup(popup_a6eb6f3fe4ac5a840f6edc1acacb9eb4)
+        ;
+
+        
+    
+    
+            marker_0e1bc4619548dd7552392186ecebea49.bindTooltip(
+                `<div>
+                     TSLA - Consumer Cyclical
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0e1bc4619548dd7552392186ecebea49.setIcon(icon_c9fcba065cc57e301a8c521bcaba353c);
+            
+    
+            var marker_dd3694478a61f4edbb08187f6afa068a = L.marker(
+                [30.2489634, 120.2052342],
+                {
+}
+            ).addTo(feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38);
+        
+    
+            var icon_f3092c237949c0573988de3a241d77e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_9fc97bb6f51198c45ffa4064db5fe371 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_07c43a2a45793e1587840bc50be4209e = $(`<div id="html_07c43a2a45793e1587840bc50be4209e" style="width: 100.0%; height: 100.0%;">             <b>Alibaba Group Holding Limited (BABA)</b><br>             <b>Sector:</b> Consumer Cyclical<br>             <b>País:</b> China<br>             <b>Capitalización:</b> $289.73 B<br>             <b>Variación (30d):</b> -8.35%             </div>`)[0];
+                popup_9fc97bb6f51198c45ffa4064db5fe371.setContent(html_07c43a2a45793e1587840bc50be4209e);
+            
+        
+
+        marker_dd3694478a61f4edbb08187f6afa068a.bindPopup(popup_9fc97bb6f51198c45ffa4064db5fe371)
+        ;
+
+        
+    
+    
+            marker_dd3694478a61f4edbb08187f6afa068a.bindTooltip(
+                `<div>
+                     BABA - Consumer Cyclical
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dd3694478a61f4edbb08187f6afa068a.setIcon(icon_f3092c237949c0573988de3a241d77e1);
+            
+    
+            var marker_714c241b35cf74fa671a3ff9856c331a = L.marker(
+                [48.1371079, 11.5753822],
+                {
+}
+            ).addTo(feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38);
+        
+    
+            var icon_71c97c948e2bb3e76728477f3a86c673 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_eb028815346f66c4a2c030fb514b2f29 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b442b046a63610b1d79817823f3066f0 = $(`<div id="html_b442b046a63610b1d79817823f3066f0" style="width: 100.0%; height: 100.0%;">             <b>BAYERISCHE MOTOREN WERKE AG   S (BMW.DE)</b><br>             <b>Sector:</b> Consumer Cyclical<br>             <b>País:</b> Germany<br>             <b>Capitalización:</b> $47.68 B<br>             <b>Variación (30d):</b> -5.52%             </div>`)[0];
+                popup_eb028815346f66c4a2c030fb514b2f29.setContent(html_b442b046a63610b1d79817823f3066f0);
+            
+        
+
+        marker_714c241b35cf74fa671a3ff9856c331a.bindPopup(popup_eb028815346f66c4a2c030fb514b2f29)
+        ;
+
+        
+    
+    
+            marker_714c241b35cf74fa671a3ff9856c331a.bindTooltip(
+                `<div>
+                     BMW.DE - Consumer Cyclical
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_714c241b35cf74fa671a3ff9856c331a.setIcon(icon_71c97c948e2bb3e76728477f3a86c673);
+            
+    
+            feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38.addTo(map_57a1cc312fa6ba37c987f2651bc4bf22);
+        
+    
+            var feature_group_1f7a72edd27dabdf4d9049d9866de25d = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_6ba546310e5fc2e3ca38c06b9b51e746 = L.polyline(
+                [[37.3893889, -122.0832101], [37.4519671, -122.177992]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4.10074423284392}
+            ).addTo(feature_group_1f7a72edd27dabdf4d9049d9866de25d);
+        
+    
+        var popup_4108a8186e8151584a31d4aa6455c462 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_39e2458aa770b93ba5ff60ea3e70d3d9 = $(`<div id="html_39e2458aa770b93ba5ff60ea3e70d3d9" style="width: 100.0%; height: 100.0%;">Correlación GOOGL-META: 0.82</div>`)[0];
+                popup_4108a8186e8151584a31d4aa6455c462.setContent(html_39e2458aa770b93ba5ff60ea3e70d3d9);
+            
+        
+
+        poly_line_6ba546310e5fc2e3ca38c06b9b51e746.bindPopup(popup_4108a8186e8151584a31d4aa6455c462)
+        ;
+
+        
+    
+    
+            var poly_line_45b3f676af6a08008835cb6be8023f0e = L.polyline(
+                [[37.3893889, -122.0832101], [37.226611, -121.9746797]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.8392837018611985}
+            ).addTo(feature_group_1f7a72edd27dabdf4d9049d9866de25d);
+        
+    
+        var popup_36d795b6db0332b28c021ced273dc6f4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e01f78affc0fad89a7fc51b13d4c7c81 = $(`<div id="html_e01f78affc0fad89a7fc51b13d4c7c81" style="width: 100.0%; height: 100.0%;">Correlación GOOGL-NFLX: 0.57</div>`)[0];
+                popup_36d795b6db0332b28c021ced273dc6f4.setContent(html_e01f78affc0fad89a7fc51b13d4c7c81);
+            
+        
+
+        poly_line_45b3f676af6a08008835cb6be8023f0e.bindPopup(popup_36d795b6db0332b28c021ced273dc6f4)
+        ;
+
+        
+    
+    
+            var poly_line_40f2c2e20fc3237d936c6c10415cdefb = L.polyline(
+                [[37.3893889, -122.0832101], [-37.8142454, 144.9631732]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.3680045361275297}
+            ).addTo(feature_group_1f7a72edd27dabdf4d9049d9866de25d);
+        
+    
+        var popup_9ebdb45af09eb8acad20e395ad8136d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a5130d5f03ca296f6069ae2b41f0188f = $(`<div id="html_a5130d5f03ca296f6069ae2b41f0188f" style="width: 100.0%; height: 100.0%;">Correlación GOOGL-TLS.AX: 0.27</div>`)[0];
+                popup_9ebdb45af09eb8acad20e395ad8136d4.setContent(html_a5130d5f03ca296f6069ae2b41f0188f);
+            
+        
+
+        poly_line_40f2c2e20fc3237d936c6c10415cdefb.bindPopup(popup_9ebdb45af09eb8acad20e395ad8136d4)
+        ;
+
+        
+    
+    
+            var poly_line_285b991ed07d22fe96a61eb610dda91d = L.polyline(
+                [[37.3893889, -122.0832101], [19.3207722, -99.1514678]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.7786803900700718}
+            ).addTo(feature_group_1f7a72edd27dabdf4d9049d9866de25d);
+        
+    
+        var popup_ad5e34b63935fddf82311d52bb85967b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_90bb588b2af8ef366066b7578e4b1acf = $(`<div id="html_90bb588b2af8ef366066b7578e4b1acf" style="width: 100.0%; height: 100.0%;">Correlación GOOGL-AMX: 0.36</div>`)[0];
+                popup_ad5e34b63935fddf82311d52bb85967b.setContent(html_90bb588b2af8ef366066b7578e4b1acf);
+            
+        
+
+        poly_line_285b991ed07d22fe96a61eb610dda91d.bindPopup(popup_ad5e34b63935fddf82311d52bb85967b)
+        ;
+
+        
+    
+    
+            var poly_line_5084a49a3e78d675e1f812944811bc75 = L.polyline(
+                [[37.4519671, -122.177992], [37.226611, -121.9746797]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3.206268899544476}
+            ).addTo(feature_group_1f7a72edd27dabdf4d9049d9866de25d);
+        
+    
+        var popup_7953cb0144184b1acd7ce980434ec7c7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_86bfc3730f5141a677622d78fd404e8c = $(`<div id="html_86bfc3730f5141a677622d78fd404e8c" style="width: 100.0%; height: 100.0%;">Correlación META-NFLX: 0.64</div>`)[0];
+                popup_7953cb0144184b1acd7ce980434ec7c7.setContent(html_86bfc3730f5141a677622d78fd404e8c);
+            
+        
+
+        poly_line_5084a49a3e78d675e1f812944811bc75.bindPopup(popup_7953cb0144184b1acd7ce980434ec7c7)
+        ;
+
+        
+    
+    
+            var poly_line_8edfb112793168bf15f0cd673fd3b4ad = L.polyline(
+                [[37.4519671, -122.177992], [-37.8142454, 144.9631732]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.920595673029145}
+            ).addTo(feature_group_1f7a72edd27dabdf4d9049d9866de25d);
+        
+    
+        var popup_6f9966c31c6d411b0330f3d6feddf0fb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c805f1e7901088f068413fc429657c4 = $(`<div id="html_9c805f1e7901088f068413fc429657c4" style="width: 100.0%; height: 100.0%;">Correlación META-TLS.AX: 0.38</div>`)[0];
+                popup_6f9966c31c6d411b0330f3d6feddf0fb.setContent(html_9c805f1e7901088f068413fc429657c4);
+            
+        
+
+        poly_line_8edfb112793168bf15f0cd673fd3b4ad.bindPopup(popup_6f9966c31c6d411b0330f3d6feddf0fb)
+        ;
+
+        
+    
+    
+            var poly_line_4c70d300b0d3a53b1709cd64186fb060 = L.polyline(
+                [[37.4519671, -122.177992], [19.3207722, -99.1514678]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.9379559627649832}
+            ).addTo(feature_group_1f7a72edd27dabdf4d9049d9866de25d);
+        
+    
+        var popup_4287aca68dd9f3b99e7070676c70fceb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2142244f6589c24ba0bd87473cc167fd = $(`<div id="html_2142244f6589c24ba0bd87473cc167fd" style="width: 100.0%; height: 100.0%;">Correlación META-AMX: 0.39</div>`)[0];
+                popup_4287aca68dd9f3b99e7070676c70fceb.setContent(html_2142244f6589c24ba0bd87473cc167fd);
+            
+        
+
+        poly_line_4c70d300b0d3a53b1709cd64186fb060.bindPopup(popup_4287aca68dd9f3b99e7070676c70fceb)
+        ;
+
+        
+    
+    
+            var poly_line_49beb0b33862aded0fb7e8bb6d2a6548 = L.polyline(
+                [[37.226611, -121.9746797], [-37.8142454, 144.9631732]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4.281950526166221}
+            ).addTo(feature_group_1f7a72edd27dabdf4d9049d9866de25d);
+        
+    
+        var popup_82ea5d444bcef8231bc065c5fc174c4a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ab121492fcca66bedb834dab34181ce = $(`<div id="html_3ab121492fcca66bedb834dab34181ce" style="width: 100.0%; height: 100.0%;">Correlación NFLX-TLS.AX: 0.86</div>`)[0];
+                popup_82ea5d444bcef8231bc065c5fc174c4a.setContent(html_3ab121492fcca66bedb834dab34181ce);
+            
+        
+
+        poly_line_49beb0b33862aded0fb7e8bb6d2a6548.bindPopup(popup_82ea5d444bcef8231bc065c5fc174c4a)
+        ;
+
+        
+    
+    
+            var poly_line_93f30d7227ff2bc99d5dbfaf5a5e3a2d = L.polyline(
+                [[37.226611, -121.9746797], [19.3207722, -99.1514678]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4.614761127894312}
+            ).addTo(feature_group_1f7a72edd27dabdf4d9049d9866de25d);
+        
+    
+        var popup_8156747d8253219ec0eeee20e95388b1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_79fd5a0a45e51926e63ed38b724aebd7 = $(`<div id="html_79fd5a0a45e51926e63ed38b724aebd7" style="width: 100.0%; height: 100.0%;">Correlación NFLX-AMX: 0.92</div>`)[0];
+                popup_8156747d8253219ec0eeee20e95388b1.setContent(html_79fd5a0a45e51926e63ed38b724aebd7);
+            
+        
+
+        poly_line_93f30d7227ff2bc99d5dbfaf5a5e3a2d.bindPopup(popup_8156747d8253219ec0eeee20e95388b1)
+        ;
+
+        
+    
+    
+            var poly_line_c7dfc79ca5cf64f9c6e0726ea2b045e5 = L.polyline(
+                [[-37.8142454, 144.9631732], [19.3207722, -99.1514678]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4.12570480576267}
+            ).addTo(feature_group_1f7a72edd27dabdf4d9049d9866de25d);
+        
+    
+        var popup_93e78c0514eb280cc7a8c3068a46ca29 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9721e45435d5afe4828c799e80ae9d35 = $(`<div id="html_9721e45435d5afe4828c799e80ae9d35" style="width: 100.0%; height: 100.0%;">Correlación TLS.AX-AMX: 0.83</div>`)[0];
+                popup_93e78c0514eb280cc7a8c3068a46ca29.setContent(html_9721e45435d5afe4828c799e80ae9d35);
+            
+        
+
+        poly_line_c7dfc79ca5cf64f9c6e0726ea2b045e5.bindPopup(popup_93e78c0514eb280cc7a8c3068a46ca29)
+        ;
+
+        
+    
+    
+            var marker_0df0333052436f64105eb04afde06962 = L.marker(
+                [37.3893889, -122.0832101],
+                {
+}
+            ).addTo(feature_group_1f7a72edd27dabdf4d9049d9866de25d);
+        
+    
+            var icon_bfc18866ea117cb5813eeccd774c79fa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_eb0c4d300842b3e032b4a740b9d49cd3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e61d10aea2a7d3287c635ee709596f5e = $(`<div id="html_e61d10aea2a7d3287c635ee709596f5e" style="width: 100.0%; height: 100.0%;">             <b>Alphabet Inc. (GOOGL)</b><br>             <b>Sector:</b> Communication Services<br>             <b>País:</b> United States<br>             <b>Capitalización:</b> $2143.67 B<br>             <b>Variación (30d):</b> 11.13%             </div>`)[0];
+                popup_eb0c4d300842b3e032b4a740b9d49cd3.setContent(html_e61d10aea2a7d3287c635ee709596f5e);
+            
+        
+
+        marker_0df0333052436f64105eb04afde06962.bindPopup(popup_eb0c4d300842b3e032b4a740b9d49cd3)
+        ;
+
+        
+    
+    
+            marker_0df0333052436f64105eb04afde06962.bindTooltip(
+                `<div>
+                     GOOGL - Communication Services
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0df0333052436f64105eb04afde06962.setIcon(icon_bfc18866ea117cb5813eeccd774c79fa);
+            
+    
+            var marker_bfb3aa1df8d578be4e1dff95b634f6fc = L.marker(
+                [37.4519671, -122.177992],
+                {
+}
+            ).addTo(feature_group_1f7a72edd27dabdf4d9049d9866de25d);
+        
+    
+            var icon_7ed3a3a384309d144261271e97b05449 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_1f47d19479300b4a3d6ea0be541ee1e5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8df3ba6beaadb6765566682cccc24f7 = $(`<div id="html_b8df3ba6beaadb6765566682cccc24f7" style="width: 100.0%; height: 100.0%;">             <b>Meta Platforms, Inc. (META)</b><br>             <b>Sector:</b> Communication Services<br>             <b>País:</b> United States<br>             <b>Capitalización:</b> $1745.10 B<br>             <b>Variación (30d):</b> 8.54%             </div>`)[0];
+                popup_1f47d19479300b4a3d6ea0be541ee1e5.setContent(html_b8df3ba6beaadb6765566682cccc24f7);
+            
+        
+
+        marker_bfb3aa1df8d578be4e1dff95b634f6fc.bindPopup(popup_1f47d19479300b4a3d6ea0be541ee1e5)
+        ;
+
+        
+    
+    
+            marker_bfb3aa1df8d578be4e1dff95b634f6fc.bindTooltip(
+                `<div>
+                     META - Communication Services
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bfb3aa1df8d578be4e1dff95b634f6fc.setIcon(icon_7ed3a3a384309d144261271e97b05449);
+            
+    
+            var marker_96d4def22ea742c3f9872e749ae05795 = L.marker(
+                [37.226611, -121.9746797],
+                {
+}
+            ).addTo(feature_group_1f7a72edd27dabdf4d9049d9866de25d);
+        
+    
+            var icon_62a823966d693adee834aebe72b1890c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_14432bd122d5550a53bc1928bca0036f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6942a602ffcb5847d613c166294fbe0b = $(`<div id="html_6942a602ffcb5847d613c166294fbe0b" style="width: 100.0%; height: 100.0%;">             <b>Netflix, Inc. (NFLX)</b><br>             <b>Sector:</b> Communication Services<br>             <b>País:</b> United States<br>             <b>Capitalización:</b> $521.09 B<br>             <b>Variación (30d):</b> 10.31%             </div>`)[0];
+                popup_14432bd122d5550a53bc1928bca0036f.setContent(html_6942a602ffcb5847d613c166294fbe0b);
+            
+        
+
+        marker_96d4def22ea742c3f9872e749ae05795.bindPopup(popup_14432bd122d5550a53bc1928bca0036f)
+        ;
+
+        
+    
+    
+            marker_96d4def22ea742c3f9872e749ae05795.bindTooltip(
+                `<div>
+                     NFLX - Communication Services
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_96d4def22ea742c3f9872e749ae05795.setIcon(icon_62a823966d693adee834aebe72b1890c);
+            
+    
+            var marker_7a8b3a9a5f5c3e5183ce2ce9689d6f40 = L.marker(
+                [-37.8142454, 144.9631732],
+                {
+}
+            ).addTo(feature_group_1f7a72edd27dabdf4d9049d9866de25d);
+        
+    
+            var icon_9d6fa2a44ee2d890ab716e2934df470e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_42936394f2bcfe0c2739cf0938307871 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0bed1711070c7673f98b6b082f30cd76 = $(`<div id="html_0bed1711070c7673f98b6b082f30cd76" style="width: 100.0%; height: 100.0%;">             <b>TELSTRA FPO [TLS] (TLS.AX)</b><br>             <b>Sector:</b> Communication Services<br>             <b>País:</b> Australia<br>             <b>Capitalización:</b> $55.61 B<br>             <b>Variación (30d):</b> 6.10%             </div>`)[0];
+                popup_42936394f2bcfe0c2739cf0938307871.setContent(html_0bed1711070c7673f98b6b082f30cd76);
+            
+        
+
+        marker_7a8b3a9a5f5c3e5183ce2ce9689d6f40.bindPopup(popup_42936394f2bcfe0c2739cf0938307871)
+        ;
+
+        
+    
+    
+            marker_7a8b3a9a5f5c3e5183ce2ce9689d6f40.bindTooltip(
+                `<div>
+                     TLS.AX - Communication Services
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7a8b3a9a5f5c3e5183ce2ce9689d6f40.setIcon(icon_9d6fa2a44ee2d890ab716e2934df470e);
+            
+    
+            var marker_2d737bb40be690bce310b0645590c23e = L.marker(
+                [19.3207722, -99.1514678],
+                {
+}
+            ).addTo(feature_group_1f7a72edd27dabdf4d9049d9866de25d);
+        
+    
+            var icon_57ff91ba8dab3500403855363c363ef7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_815485ee349ae0c2e76cb33140fc8c0f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7fff60ca0b2c4d363d9d3da136dd86c1 = $(`<div id="html_7fff60ca0b2c4d363d9d3da136dd86c1" style="width: 100.0%; height: 100.0%;">             <b>America Movil, S.A.B. de C.V. (AMX)</b><br>             <b>Sector:</b> Communication Services<br>             <b>País:</b> Mexico<br>             <b>Capitalización:</b> $50.94 B<br>             <b>Variación (30d):</b> -0.47%             </div>`)[0];
+                popup_815485ee349ae0c2e76cb33140fc8c0f.setContent(html_7fff60ca0b2c4d363d9d3da136dd86c1);
+            
+        
+
+        marker_2d737bb40be690bce310b0645590c23e.bindPopup(popup_815485ee349ae0c2e76cb33140fc8c0f)
+        ;
+
+        
+    
+    
+            marker_2d737bb40be690bce310b0645590c23e.bindTooltip(
+                `<div>
+                     AMX - Communication Services
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2d737bb40be690bce310b0645590c23e.setIcon(icon_57ff91ba8dab3500403855363c363ef7);
+            
+    
+            feature_group_1f7a72edd27dabdf4d9049d9866de25d.addTo(map_57a1cc312fa6ba37c987f2651bc4bf22);
+        
+    
+            var feature_group_cd3a104ba5b098555be54cc32d0e9e80 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_8646c558a57b39ee79e28a9b955688ed = L.polyline(
+                [[36.3728608, -94.208787], [39.1014537, -84.5124602]],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "pink", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.0845314077217243}
+            ).addTo(feature_group_cd3a104ba5b098555be54cc32d0e9e80);
+        
+    
+        var popup_db5d770c6dcb7e93268f9d8827f43241 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aed0f6befdfbd76beae18718ce16fda3 = $(`<div id="html_aed0f6befdfbd76beae18718ce16fda3" style="width: 100.0%; height: 100.0%;">Correlación WMT-PG: 0.22</div>`)[0];
+                popup_db5d770c6dcb7e93268f9d8827f43241.setContent(html_aed0f6befdfbd76beae18718ce16fda3);
+            
+        
+
+        poly_line_8646c558a57b39ee79e28a9b955688ed.bindPopup(popup_db5d770c6dcb7e93268f9d8827f43241)
+        ;
+
+        
+    
+    
+            var poly_line_083adc6a420662402baf1783fa41e76a = L.polyline(
+                [[36.3728608, -94.208787], [33.7544657, -84.3898151]],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "pink", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3.0449143663683693}
+            ).addTo(feature_group_cd3a104ba5b098555be54cc32d0e9e80);
+        
+    
+        var popup_9c591b95c1f7e1ea593efe56b5c3cd75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_79f2e504ef641fb49a8cbb35db1ce65f = $(`<div id="html_79f2e504ef641fb49a8cbb35db1ce65f" style="width: 100.0%; height: 100.0%;">Correlación WMT-KO: 0.61</div>`)[0];
+                popup_9c591b95c1f7e1ea593efe56b5c3cd75.setContent(html_79f2e504ef641fb49a8cbb35db1ce65f);
+            
+        
+
+        poly_line_083adc6a420662402baf1783fa41e76a.bindPopup(popup_9c591b95c1f7e1ea593efe56b5c3cd75)
+        ;
+
+        
+    
+    
+            var poly_line_2bc48eebba26969aa92c11ed6332276c = L.polyline(
+                [[36.3728608, -94.208787], [46.4602978, 6.8418655]],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "pink", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.7076417925136513}
+            ).addTo(feature_group_cd3a104ba5b098555be54cc32d0e9e80);
+        
+    
+        var popup_71cad9456eea2c7963ed05408158414f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_875ede7a5ba0053f4c3a1592e8c600c1 = $(`<div id="html_875ede7a5ba0053f4c3a1592e8c600c1" style="width: 100.0%; height: 100.0%;">Correlación WMT-NESN.SW: 0.34</div>`)[0];
+                popup_71cad9456eea2c7963ed05408158414f.setContent(html_875ede7a5ba0053f4c3a1592e8c600c1);
+            
+        
+
+        poly_line_2bc48eebba26969aa92c11ed6332276c.bindPopup(popup_71cad9456eea2c7963ed05408158414f)
+        ;
+
+        
+    
+    
+            var poly_line_73ed306990f1d13bdc01019a67b9e65a = L.polyline(
+                [[36.3728608, -94.208787], [41.0409305, -73.7145746]],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "pink", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4.321382011103294}
+            ).addTo(feature_group_cd3a104ba5b098555be54cc32d0e9e80);
+        
+    
+        var popup_c615c97b7ab403d3afef153c06f8bff3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_81f527136677592a57c0cf1543cbf86d = $(`<div id="html_81f527136677592a57c0cf1543cbf86d" style="width: 100.0%; height: 100.0%;">Correlación WMT-PEP: 0.86</div>`)[0];
+                popup_c615c97b7ab403d3afef153c06f8bff3.setContent(html_81f527136677592a57c0cf1543cbf86d);
+            
+        
+
+        poly_line_73ed306990f1d13bdc01019a67b9e65a.bindPopup(popup_c615c97b7ab403d3afef153c06f8bff3)
+        ;
+
+        
+    
+    
+            var poly_line_fb7a7d2f22d72f0f8b171ab531bb03f4 = L.polyline(
+                [[39.1014537, -84.5124602], [33.7544657, -84.3898151]],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "pink", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.3473057168084581}
+            ).addTo(feature_group_cd3a104ba5b098555be54cc32d0e9e80);
+        
+    
+        var popup_580ca586bce6e1ce0d959de7a1482c9d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0affed1183dc0f50c46bf23f9881b113 = $(`<div id="html_0affed1183dc0f50c46bf23f9881b113" style="width: 100.0%; height: 100.0%;">Correlación PG-KO: 0.27</div>`)[0];
+                popup_580ca586bce6e1ce0d959de7a1482c9d.setContent(html_0affed1183dc0f50c46bf23f9881b113);
+            
+        
+
+        poly_line_fb7a7d2f22d72f0f8b171ab531bb03f4.bindPopup(popup_580ca586bce6e1ce0d959de7a1482c9d)
+        ;
+
+        
+    
+    
+            var poly_line_cffeb46601ef7cd663beaa867325f9be = L.polyline(
+                [[39.1014537, -84.5124602], [46.4602978, 6.8418655]],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "pink", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.0801397329933868}
+            ).addTo(feature_group_cd3a104ba5b098555be54cc32d0e9e80);
+        
+    
+        var popup_afe79b7d93c126a94bb136f01f82c4ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_09e4905d1ff05e2bdef5b736abad9808 = $(`<div id="html_09e4905d1ff05e2bdef5b736abad9808" style="width: 100.0%; height: 100.0%;">Correlación PG-NESN.SW: 0.22</div>`)[0];
+                popup_afe79b7d93c126a94bb136f01f82c4ee.setContent(html_09e4905d1ff05e2bdef5b736abad9808);
+            
+        
+
+        poly_line_cffeb46601ef7cd663beaa867325f9be.bindPopup(popup_afe79b7d93c126a94bb136f01f82c4ee)
+        ;
+
+        
+    
+    
+            var poly_line_e8c13cba7febc2e4b96fcc0063c0dcb6 = L.polyline(
+                [[39.1014537, -84.5124602], [41.0409305, -73.7145746]],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "pink", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5007625679588448}
+            ).addTo(feature_group_cd3a104ba5b098555be54cc32d0e9e80);
+        
+    
+        var popup_1645a6cb52d11162a360108ded067063 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0797e8fd1032b7c60f6ff994cda86fb0 = $(`<div id="html_0797e8fd1032b7c60f6ff994cda86fb0" style="width: 100.0%; height: 100.0%;">Correlación PG-PEP: 0.50</div>`)[0];
+                popup_1645a6cb52d11162a360108ded067063.setContent(html_0797e8fd1032b7c60f6ff994cda86fb0);
+            
+        
+
+        poly_line_e8c13cba7febc2e4b96fcc0063c0dcb6.bindPopup(popup_1645a6cb52d11162a360108ded067063)
+        ;
+
+        
+    
+    
+            var poly_line_28703381922ae48b891fb36f14cf01b5 = L.polyline(
+                [[33.7544657, -84.3898151], [46.4602978, 6.8418655]],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "pink", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.426531971824958}
+            ).addTo(feature_group_cd3a104ba5b098555be54cc32d0e9e80);
+        
+    
+        var popup_58431732c01f8fa74918ad9e4d985696 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d1f16c15ec6d8eda48e8d7cc13aa5d2c = $(`<div id="html_d1f16c15ec6d8eda48e8d7cc13aa5d2c" style="width: 100.0%; height: 100.0%;">Correlación KO-NESN.SW: 0.29</div>`)[0];
+                popup_58431732c01f8fa74918ad9e4d985696.setContent(html_d1f16c15ec6d8eda48e8d7cc13aa5d2c);
+            
+        
+
+        poly_line_28703381922ae48b891fb36f14cf01b5.bindPopup(popup_58431732c01f8fa74918ad9e4d985696)
+        ;
+
+        
+    
+    
+            var poly_line_6615cf27f3ca65cd592513a7b99fd7c3 = L.polyline(
+                [[33.7544657, -84.3898151], [41.0409305, -73.7145746]],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "pink", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.3779725543983892}
+            ).addTo(feature_group_cd3a104ba5b098555be54cc32d0e9e80);
+        
+    
+        var popup_88703f2c0d140ad0767e11d5e556c221 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1b6bc05ed191765407810dde12f6210b = $(`<div id="html_1b6bc05ed191765407810dde12f6210b" style="width: 100.0%; height: 100.0%;">Correlación KO-PEP: 0.28</div>`)[0];
+                popup_88703f2c0d140ad0767e11d5e556c221.setContent(html_1b6bc05ed191765407810dde12f6210b);
+            
+        
+
+        poly_line_6615cf27f3ca65cd592513a7b99fd7c3.bindPopup(popup_88703f2c0d140ad0767e11d5e556c221)
+        ;
+
+        
+    
+    
+            var poly_line_4b070d94e9872a98821aecbf82b04bed = L.polyline(
+                [[46.4602978, 6.8418655], [41.0409305, -73.7145746]],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "pink", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 1.5335970608159621}
+            ).addTo(feature_group_cd3a104ba5b098555be54cc32d0e9e80);
+        
+    
+        var popup_57b1bd45cae2ec743b3d019bb7699449 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_36c8746bb75c6544f4bbe161b22140d6 = $(`<div id="html_36c8746bb75c6544f4bbe161b22140d6" style="width: 100.0%; height: 100.0%;">Correlación NESN.SW-PEP: 0.31</div>`)[0];
+                popup_57b1bd45cae2ec743b3d019bb7699449.setContent(html_36c8746bb75c6544f4bbe161b22140d6);
+            
+        
+
+        poly_line_4b070d94e9872a98821aecbf82b04bed.bindPopup(popup_57b1bd45cae2ec743b3d019bb7699449)
+        ;
+
+        
+    
+    
+            var marker_9b6a17c2a9866c1e9413cf305ce10d16 = L.marker(
+                [36.3728608, -94.208787],
+                {
+}
+            ).addTo(feature_group_cd3a104ba5b098555be54cc32d0e9e80);
+        
+    
+            var icon_09fc515db0c3d21e7287170e1efd6042 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_43d9c2054ca904fb3c7ca3af1eebc380 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f40109f146f8559f89675174f2b3eb94 = $(`<div id="html_f40109f146f8559f89675174f2b3eb94" style="width: 100.0%; height: 100.0%;">             <b>Walmart Inc. (WMT)</b><br>             <b>Sector:</b> Consumer Defensive<br>             <b>País:</b> United States<br>             <b>Capitalización:</b> $779.69 B<br>             <b>Variación (30d):</b> 0.72%             </div>`)[0];
+                popup_43d9c2054ca904fb3c7ca3af1eebc380.setContent(html_f40109f146f8559f89675174f2b3eb94);
+            
+        
+
+        marker_9b6a17c2a9866c1e9413cf305ce10d16.bindPopup(popup_43d9c2054ca904fb3c7ca3af1eebc380)
+        ;
+
+        
+    
+    
+            marker_9b6a17c2a9866c1e9413cf305ce10d16.bindTooltip(
+                `<div>
+                     WMT - Consumer Defensive
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9b6a17c2a9866c1e9413cf305ce10d16.setIcon(icon_09fc515db0c3d21e7287170e1efd6042);
+            
+    
+            var marker_458b85a2b4ccb1ef27b160ed4b67b587 = L.marker(
+                [39.1014537, -84.5124602],
+                {
+}
+            ).addTo(feature_group_cd3a104ba5b098555be54cc32d0e9e80);
+        
+    
+            var icon_ede27b7cfc8ae1fe4858be17ae5cbb42 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_476cb7914a7005e270d213e71da1863b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb361b27ed8a74f1d76120ec2f50d8f3 = $(`<div id="html_cb361b27ed8a74f1d76120ec2f50d8f3" style="width: 100.0%; height: 100.0%;">             <b>Procter & Gamble Company (The) (PG)</b><br>             <b>Sector:</b> Consumer Defensive<br>             <b>País:</b> United States<br>             <b>Capitalización:</b> $381.13 B<br>             <b>Variación (30d):</b> 1.03%             </div>`)[0];
+                popup_476cb7914a7005e270d213e71da1863b.setContent(html_cb361b27ed8a74f1d76120ec2f50d8f3);
+            
+        
+
+        marker_458b85a2b4ccb1ef27b160ed4b67b587.bindPopup(popup_476cb7914a7005e270d213e71da1863b)
+        ;
+
+        
+    
+    
+            marker_458b85a2b4ccb1ef27b160ed4b67b587.bindTooltip(
+                `<div>
+                     PG - Consumer Defensive
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_458b85a2b4ccb1ef27b160ed4b67b587.setIcon(icon_ede27b7cfc8ae1fe4858be17ae5cbb42);
+            
+    
+            var marker_d00505b3a1a5a9171946cc2eec536c2b = L.marker(
+                [33.7544657, -84.3898151],
+                {
+}
+            ).addTo(feature_group_cd3a104ba5b098555be54cc32d0e9e80);
+        
+    
+            var icon_02d9cb5d2e1ff445ce2c308e20fb16be = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_43f6e4750da1eb63c9f30110e3dcc47e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b4d46557e0093d28ce1bcea9e858ce7 = $(`<div id="html_5b4d46557e0093d28ce1bcea9e858ce7" style="width: 100.0%; height: 100.0%;">             <b>Coca-Cola Company (The) (KO)</b><br>             <b>Sector:</b> Consumer Defensive<br>             <b>País:</b> United States<br>             <b>Capitalización:</b> $308.92 B<br>             <b>Variación (30d):</b> 3.22%             </div>`)[0];
+                popup_43f6e4750da1eb63c9f30110e3dcc47e.setContent(html_5b4d46557e0093d28ce1bcea9e858ce7);
+            
+        
+
+        marker_d00505b3a1a5a9171946cc2eec536c2b.bindPopup(popup_43f6e4750da1eb63c9f30110e3dcc47e)
+        ;
+
+        
+    
+    
+            marker_d00505b3a1a5a9171946cc2eec536c2b.bindTooltip(
+                `<div>
+                     KO - Consumer Defensive
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d00505b3a1a5a9171946cc2eec536c2b.setIcon(icon_02d9cb5d2e1ff445ce2c308e20fb16be);
+            
+    
+            var marker_f43b90be0258b3563057d608702a06ad = L.marker(
+                [46.4602978, 6.8418655],
+                {
+}
+            ).addTo(feature_group_cd3a104ba5b098555be54cc32d0e9e80);
+        
+    
+            var icon_06be0cae6bbb7c8c9fd3552e9bbec5bb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_293c72ae1d4ec5d93e0d818af506791f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1b4a5f4b0bdf7b6f70b26a210524b917 = $(`<div id="html_1b4a5f4b0bdf7b6f70b26a210524b917" style="width: 100.0%; height: 100.0%;">             <b>NESTLE N (NESN.SW)</b><br>             <b>Sector:</b> Consumer Defensive<br>             <b>País:</b> Switzerland<br>             <b>Capitalización:</b> $223.05 B<br>             <b>Variación (30d):</b> 0.57%             </div>`)[0];
+                popup_293c72ae1d4ec5d93e0d818af506791f.setContent(html_1b4a5f4b0bdf7b6f70b26a210524b917);
+            
+        
+
+        marker_f43b90be0258b3563057d608702a06ad.bindPopup(popup_293c72ae1d4ec5d93e0d818af506791f)
+        ;
+
+        
+    
+    
+            marker_f43b90be0258b3563057d608702a06ad.bindTooltip(
+                `<div>
+                     NESN.SW - Consumer Defensive
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f43b90be0258b3563057d608702a06ad.setIcon(icon_06be0cae6bbb7c8c9fd3552e9bbec5bb);
+            
+    
+            var marker_1c1bff8f2062384f2d767e0726787e88 = L.marker(
+                [41.0409305, -73.7145746],
+                {
+}
+            ).addTo(feature_group_cd3a104ba5b098555be54cc32d0e9e80);
+        
+    
+            var icon_736fe87394ba40fea84a63518809e227 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_06c1feeea7e33233373dd3604a0a0825 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1341d1b8732b6c53af2965f0a2c9fe48 = $(`<div id="html_1341d1b8732b6c53af2965f0a2c9fe48" style="width: 100.0%; height: 100.0%;">             <b>Pepsico, Inc. (PEP)</b><br>             <b>Sector:</b> Consumer Defensive<br>             <b>País:</b> United States<br>             <b>Capitalización:</b> $178.19 B<br>             <b>Variación (30d):</b> -0.22%             </div>`)[0];
+                popup_06c1feeea7e33233373dd3604a0a0825.setContent(html_1341d1b8732b6c53af2965f0a2c9fe48);
+            
+        
+
+        marker_1c1bff8f2062384f2d767e0726787e88.bindPopup(popup_06c1feeea7e33233373dd3604a0a0825)
+        ;
+
+        
+    
+    
+            marker_1c1bff8f2062384f2d767e0726787e88.bindTooltip(
+                `<div>
+                     PEP - Consumer Defensive
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1c1bff8f2062384f2d767e0726787e88.setIcon(icon_736fe87394ba40fea84a63518809e227);
+            
+    
+            feature_group_cd3a104ba5b098555be54cc32d0e9e80.addTo(map_57a1cc312fa6ba37c987f2651bc4bf22);
+        
+    
+            var feature_group_b4e605e8e868caf6423318c0f01a9f52 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_ea6f1baa597ca6a0f3feca73f9c39a21 = L.polyline(
+                [[37.7792588, -122.4193286], [51.4893335, -0.1440551]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3.394526370626144}
+            ).addTo(feature_group_b4e605e8e868caf6423318c0f01a9f52);
+        
+    
+        var popup_92d0623a52861508aa07b9a60a60b5ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2eb49f0847beb0dc0d42afb9b4b03f5 = $(`<div id="html_e2eb49f0847beb0dc0d42afb9b4b03f5" style="width: 100.0%; height: 100.0%;">Correlación V-HSBA.L: 0.68</div>`)[0];
+                popup_92d0623a52861508aa07b9a60a60b5ce.setContent(html_e2eb49f0847beb0dc0d42afb9b4b03f5);
+            
+        
+
+        poly_line_ea6f1baa597ca6a0f3feca73f9c39a21.bindPopup(popup_92d0623a52861508aa07b9a60a60b5ce)
+        ;
+
+        
+    
+    
+            var poly_line_36f2fb5b6dd6da93d434eb64b2612ce2 = L.polyline(
+                [[37.7792588, -122.4193286], [40.4167047, -3.7035825]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 4.570075309618899}
+            ).addTo(feature_group_b4e605e8e868caf6423318c0f01a9f52);
+        
+    
+        var popup_d99d7afddf9bcb9f3d867574d6e6b357 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2be3b3240eea432d1e6f0ca3c00f26b9 = $(`<div id="html_2be3b3240eea432d1e6f0ca3c00f26b9" style="width: 100.0%; height: 100.0%;">Correlación V-SAN.MC: 0.91</div>`)[0];
+                popup_d99d7afddf9bcb9f3d867574d6e6b357.setContent(html_2be3b3240eea432d1e6f0ca3c00f26b9);
+            
+        
+
+        poly_line_36f2fb5b6dd6da93d434eb64b2612ce2.bindPopup(popup_d99d7afddf9bcb9f3d867574d6e6b357)
+        ;
+
+        
+    
+    
+            var poly_line_39f46ae83ba93cd25b73a6e78797833e = L.polyline(
+                [[51.4893335, -0.1440551], [40.4167047, -3.7035825]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3.9538303994177664}
+            ).addTo(feature_group_b4e605e8e868caf6423318c0f01a9f52);
+        
+    
+        var popup_9f9d845b837dcc4b001952633e90d7d9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_716b2462fa76af430dfb1b42a9a08d14 = $(`<div id="html_716b2462fa76af430dfb1b42a9a08d14" style="width: 100.0%; height: 100.0%;">Correlación HSBA.L-SAN.MC: 0.79</div>`)[0];
+                popup_9f9d845b837dcc4b001952633e90d7d9.setContent(html_716b2462fa76af430dfb1b42a9a08d14);
+            
+        
+
+        poly_line_39f46ae83ba93cd25b73a6e78797833e.bindPopup(popup_9f9d845b837dcc4b001952633e90d7d9)
+        ;
+
+        
+    
+    
+            var marker_129104b00a2d1aff973bce37f551fc5a = L.marker(
+                [37.7792588, -122.4193286],
+                {
+}
+            ).addTo(feature_group_b4e605e8e868caf6423318c0f01a9f52);
+        
+    
+            var icon_4fa8cfb1107860bf1fc99e47faef53b1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_7aa46b16329ff1b792efa0492a24aeee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41d8693aed7ab5bb7d5bc4ab05488417 = $(`<div id="html_41d8693aed7ab5bb7d5bc4ab05488417" style="width: 100.0%; height: 100.0%;">             <b>Visa Inc. (V)</b><br>             <b>Sector:</b> Financial Services<br>             <b>País:</b> United States<br>             <b>Capitalización:</b> $702.40 B<br>             <b>Variación (30d):</b> 3.21%             </div>`)[0];
+                popup_7aa46b16329ff1b792efa0492a24aeee.setContent(html_41d8693aed7ab5bb7d5bc4ab05488417);
+            
+        
+
+        marker_129104b00a2d1aff973bce37f551fc5a.bindPopup(popup_7aa46b16329ff1b792efa0492a24aeee)
+        ;
+
+        
+    
+    
+            marker_129104b00a2d1aff973bce37f551fc5a.bindTooltip(
+                `<div>
+                     V - Financial Services
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_129104b00a2d1aff973bce37f551fc5a.setIcon(icon_4fa8cfb1107860bf1fc99e47faef53b1);
+            
+    
+            var marker_b3f70c50a80c3f0c1ec19dec2d4d37cf = L.marker(
+                [51.4893335, -0.1440551],
+                {
+}
+            ).addTo(feature_group_b4e605e8e868caf6423318c0f01a9f52);
+        
+    
+            var icon_1714523a5728083e45f2bb287e611b03 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_a4c70e6a53291b8ce2ae4d409668d8cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8ef877eb2aca31102b158f26c782332a = $(`<div id="html_8ef877eb2aca31102b158f26c782332a" style="width: 100.0%; height: 100.0%;">             <b>HSBC HOLDINGS PLC ORD $0.50 (UK (HSBA.L)</b><br>             <b>Sector:</b> Financial Services<br>             <b>País:</b> United Kingdom<br>             <b>Capitalización:</b> $155.28 B<br>             <b>Variación (30d):</b> -0.02%             </div>`)[0];
+                popup_a4c70e6a53291b8ce2ae4d409668d8cf.setContent(html_8ef877eb2aca31102b158f26c782332a);
+            
+        
+
+        marker_b3f70c50a80c3f0c1ec19dec2d4d37cf.bindPopup(popup_a4c70e6a53291b8ce2ae4d409668d8cf)
+        ;
+
+        
+    
+    
+            marker_b3f70c50a80c3f0c1ec19dec2d4d37cf.bindTooltip(
+                `<div>
+                     HSBA.L - Financial Services
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b3f70c50a80c3f0c1ec19dec2d4d37cf.setIcon(icon_1714523a5728083e45f2bb287e611b03);
+            
+    
+            var marker_6231b7da214aba8638d89a19cc3682c9 = L.marker(
+                [40.4167047, -3.7035825],
+                {
+}
+            ).addTo(feature_group_b4e605e8e868caf6423318c0f01a9f52);
+        
+    
+            var icon_339d1317a8376d427105a58c71d9b058 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_41158fca1419636a9f153dc282371160 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a899122f5e2483ecec294392ab8c750 = $(`<div id="html_5a899122f5e2483ecec294392ab8c750" style="width: 100.0%; height: 100.0%;">             <b>BANCO SANTANDER S.A. (SAN.MC)</b><br>             <b>Sector:</b> Financial Services<br>             <b>País:</b> Spain<br>             <b>Capitalización:</b> $105.30 B<br>             <b>Variación (30d):</b> 4.70%             </div>`)[0];
+                popup_41158fca1419636a9f153dc282371160.setContent(html_5a899122f5e2483ecec294392ab8c750);
+            
+        
+
+        marker_6231b7da214aba8638d89a19cc3682c9.bindPopup(popup_41158fca1419636a9f153dc282371160)
+        ;
+
+        
+    
+    
+            marker_6231b7da214aba8638d89a19cc3682c9.bindTooltip(
+                `<div>
+                     SAN.MC - Financial Services
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6231b7da214aba8638d89a19cc3682c9.setIcon(icon_339d1317a8376d427105a58c71d9b058);
+            
+    
+            feature_group_b4e605e8e868caf6423318c0f01a9f52.addTo(map_57a1cc312fa6ba37c987f2651bc4bf22);
+        
+    
+            var feature_group_02626627723f2e9e6e38fa3422d63f18 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_3b9c766dc8b87a3f33e4c71a4a606fc3 = L.polyline(
+                [[30.0795707, -95.4187924], [-34.6083696, -58.4440583]],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "black", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5821180910203987}
+            ).addTo(feature_group_02626627723f2e9e6e38fa3422d63f18);
+        
+    
+        var popup_39e1d74439fd55fe7649c31d8e167e1e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4e89a93416368d047fca8d5bb8fb0923 = $(`<div id="html_4e89a93416368d047fca8d5bb8fb0923" style="width: 100.0%; height: 100.0%;">Correlación XOM-YPF: 0.52</div>`)[0];
+                popup_39e1d74439fd55fe7649c31d8e167e1e.setContent(html_4e89a93416368d047fca8d5bb8fb0923);
+            
+        
+
+        poly_line_3b9c766dc8b87a3f33e4c71a4a606fc3.bindPopup(popup_39e1d74439fd55fe7649c31d8e167e1e)
+        ;
+
+        
+    
+    
+            var marker_86a76552df4642e5d83fca3678d88d99 = L.marker(
+                [30.0795707, -95.4187924],
+                {
+}
+            ).addTo(feature_group_02626627723f2e9e6e38fa3422d63f18);
+        
+    
+            var icon_d01ae53352828c2a7213a5ec355e9aae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_0a17b48ae89f661935e7711c2480a495 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5db8541e3bdfef37737c3d32d61d9e5b = $(`<div id="html_5db8541e3bdfef37737c3d32d61d9e5b" style="width: 100.0%; height: 100.0%;">             <b>Exxon Mobil Corporation (XOM)</b><br>             <b>Sector:</b> Energy<br>             <b>País:</b> United States<br>             <b>Capitalización:</b> $452.38 B<br>             <b>Variación (30d):</b> -2.95%             </div>`)[0];
+                popup_0a17b48ae89f661935e7711c2480a495.setContent(html_5db8541e3bdfef37737c3d32d61d9e5b);
+            
+        
+
+        marker_86a76552df4642e5d83fca3678d88d99.bindPopup(popup_0a17b48ae89f661935e7711c2480a495)
+        ;
+
+        
+    
+    
+            marker_86a76552df4642e5d83fca3678d88d99.bindTooltip(
+                `<div>
+                     XOM - Energy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_86a76552df4642e5d83fca3678d88d99.setIcon(icon_d01ae53352828c2a7213a5ec355e9aae);
+            
+    
+            var marker_9ac294a731befb821cdadb4c42a350dd = L.marker(
+                [-34.6083696, -58.4440583],
+                {
+}
+            ).addTo(feature_group_02626627723f2e9e6e38fa3422d63f18);
+        
+    
+            var icon_8370ca359dccaecb2e4e0e38bf622667 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_760466b7111047d7aa8ab497658ef8f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_25a34772e4b9aebca878c8b38eec5ec5 = $(`<div id="html_25a34772e4b9aebca878c8b38eec5ec5" style="width: 100.0%; height: 100.0%;">             <b>YPF Sociedad Anonima (YPF)</b><br>             <b>Sector:</b> Energy<br>             <b>País:</b> Argentina<br>             <b>Capitalización:</b> $13.26 B<br>             <b>Variación (30d):</b> -5.12%             </div>`)[0];
+                popup_760466b7111047d7aa8ab497658ef8f9.setContent(html_25a34772e4b9aebca878c8b38eec5ec5);
+            
+        
+
+        marker_9ac294a731befb821cdadb4c42a350dd.bindPopup(popup_760466b7111047d7aa8ab497658ef8f9)
+        ;
+
+        
+    
+    
+            marker_9ac294a731befb821cdadb4c42a350dd.bindTooltip(
+                `<div>
+                     YPF - Energy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9ac294a731befb821cdadb4c42a350dd.setIcon(icon_8370ca359dccaecb2e4e0e38bf622667);
+            
+    
+            feature_group_02626627723f2e9e6e38fa3422d63f18.addTo(map_57a1cc312fa6ba37c987f2651bc4bf22);
+        
+    
+            var feature_group_1c7ad340cabdd0b50ad4c080a73f591a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_3724906ae4950bbbd815124a78d76c57 = L.marker(
+                [40.4951365, -74.4439254],
+                {
+}
+            ).addTo(feature_group_1c7ad340cabdd0b50ad4c080a73f591a);
+        
+    
+            var icon_78fcb735b73af95500b4fb13d695d0d4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_27917db3a5555732962aa4d8b0dff8aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fa6ce8416d724f01b21311c7168d361d = $(`<div id="html_fa6ce8416d724f01b21311c7168d361d" style="width: 100.0%; height: 100.0%;">             <b>Johnson & Johnson (JNJ)</b><br>             <b>Sector:</b> Healthcare<br>             <b>País:</b> United States<br>             <b>Capitalización:</b> $373.49 B<br>             <b>Variación (30d):</b> 1.57%             </div>`)[0];
+                popup_27917db3a5555732962aa4d8b0dff8aa.setContent(html_fa6ce8416d724f01b21311c7168d361d);
+            
+        
+
+        marker_3724906ae4950bbbd815124a78d76c57.bindPopup(popup_27917db3a5555732962aa4d8b0dff8aa)
+        ;
+
+        
+    
+    
+            marker_3724906ae4950bbbd815124a78d76c57.bindTooltip(
+                `<div>
+                     JNJ - Healthcare
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3724906ae4950bbbd815124a78d76c57.setIcon(icon_78fcb735b73af95500b4fb13d695d0d4);
+            
+    
+            feature_group_1c7ad340cabdd0b50ad4c080a73f591a.addTo(map_57a1cc312fa6ba37c987f2651bc4bf22);
+        
+    
+            var feature_group_61b18f6e3657d9713bf5483b87bb8755 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_7370b25afccda393d2d0f060e72b9b13 = L.marker(
+                [52.1594747, 4.4908843],
+                {
+}
+            ).addTo(feature_group_61b18f6e3657d9713bf5483b87bb8755);
+        
+    
+            var icon_c41d1b047857dd1d4f97d6978296a74f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_e83f2e032fe9aaff7b962848f617d6aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3007e320a20049e006e46bcf3065c0c9 = $(`<div id="html_3007e320a20049e006e46bcf3065c0c9" style="width: 100.0%; height: 100.0%;">             <b>AIRBUS SE (AIR.PA)</b><br>             <b>Sector:</b> Industrials<br>             <b>País:</b> Netherlands<br>             <b>Capitalización:</b> $130.43 B<br>             <b>Variación (30d):</b> 4.36%             </div>`)[0];
+                popup_e83f2e032fe9aaff7b962848f617d6aa.setContent(html_3007e320a20049e006e46bcf3065c0c9);
+            
+        
+
+        marker_7370b25afccda393d2d0f060e72b9b13.bindPopup(popup_e83f2e032fe9aaff7b962848f617d6aa)
+        ;
+
+        
+    
+    
+            marker_7370b25afccda393d2d0f060e72b9b13.bindTooltip(
+                `<div>
+                     AIR.PA - Industrials
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7370b25afccda393d2d0f060e72b9b13.setIcon(icon_c41d1b047857dd1d4f97d6978296a74f);
+            
+    
+            feature_group_61b18f6e3657d9713bf5483b87bb8755.addTo(map_57a1cc312fa6ba37c987f2651bc4bf22);
+        
+    
+            var feature_group_46015e213fdfdef3839d2d58e024d411 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_38d4a8880a15adcc00a2ed51cdb58045 = L.polyline(
+                [[-37.8142454, 144.9631732], [-22.9110137, -43.2093727]],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkgreen", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3.7604102447797425}
+            ).addTo(feature_group_46015e213fdfdef3839d2d58e024d411);
+        
+    
+        var popup_f33e00293a4594783220011bac127580 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fdd72d26aef82aad475cc95b51c907f8 = $(`<div id="html_fdd72d26aef82aad475cc95b51c907f8" style="width: 100.0%; height: 100.0%;">Correlación BHP-VALE: 0.75</div>`)[0];
+                popup_f33e00293a4594783220011bac127580.setContent(html_fdd72d26aef82aad475cc95b51c907f8);
+            
+        
+
+        poly_line_38d4a8880a15adcc00a2ed51cdb58045.bindPopup(popup_f33e00293a4594783220011bac127580)
+        ;
+
+        
+    
+    
+            var marker_36d4e946c7bb6591059cebc81bff02ab = L.marker(
+                [-37.8142454, 144.9631732],
+                {
+}
+            ).addTo(feature_group_46015e213fdfdef3839d2d58e024d411);
+        
+    
+            var icon_abdef6b3e55338d72ca686f5bbebda10 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_92900e438b39ed477709fca2cea432e5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f732e183eb7b01cfe9a9e43b747c66a2 = $(`<div id="html_f732e183eb7b01cfe9a9e43b747c66a2" style="width: 100.0%; height: 100.0%;">             <b>BHP Group Limited (BHP)</b><br>             <b>Sector:</b> Basic Materials<br>             <b>País:</b> Australia<br>             <b>Capitalización:</b> $127.82 B<br>             <b>Variación (30d):</b> 0.56%             </div>`)[0];
+                popup_92900e438b39ed477709fca2cea432e5.setContent(html_f732e183eb7b01cfe9a9e43b747c66a2);
+            
+        
+
+        marker_36d4e946c7bb6591059cebc81bff02ab.bindPopup(popup_92900e438b39ed477709fca2cea432e5)
+        ;
+
+        
+    
+    
+            marker_36d4e946c7bb6591059cebc81bff02ab.bindTooltip(
+                `<div>
+                     BHP - Basic Materials
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_36d4e946c7bb6591059cebc81bff02ab.setIcon(icon_abdef6b3e55338d72ca686f5bbebda10);
+            
+    
+            var marker_7c208957e0f0a656e356d96283bd2304 = L.marker(
+                [-22.9110137, -43.2093727],
+                {
+}
+            ).addTo(feature_group_46015e213fdfdef3839d2d58e024d411);
+        
+    
+            var icon_45cf9bbc160efd8a47cb8d1de17e41f7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_3d37d351bc500162d85c567f450da296 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_29bfd991316b76433bac996e6901cf1f = $(`<div id="html_29bfd991316b76433bac996e6901cf1f" style="width: 100.0%; height: 100.0%;">             <b>VALE S.A. (VALE)</b><br>             <b>Sector:</b> Basic Materials<br>             <b>País:</b> Brazil<br>             <b>Capitalización:</b> $40.89 B<br>             <b>Variación (30d):</b> -0.21%             </div>`)[0];
+                popup_3d37d351bc500162d85c567f450da296.setContent(html_29bfd991316b76433bac996e6901cf1f);
+            
+        
+
+        marker_7c208957e0f0a656e356d96283bd2304.bindPopup(popup_3d37d351bc500162d85c567f450da296)
+        ;
+
+        
+    
+    
+            marker_7c208957e0f0a656e356d96283bd2304.bindTooltip(
+                `<div>
+                     VALE - Basic Materials
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7c208957e0f0a656e356d96283bd2304.setIcon(icon_45cf9bbc160efd8a47cb8d1de17e41f7);
+            
+    
+            feature_group_46015e213fdfdef3839d2d58e024d411.addTo(map_57a1cc312fa6ba37c987f2651bc4bf22);
+        
+    
+            var feature_group_b57e087bf59316844fc5e902b45c270d = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_acf2324abdcf8e205be63bbdc6ff8ce1 = L.marker(
+                [41.8933203, 12.4829321],
+                {
+}
+            ).addTo(feature_group_b57e087bf59316844fc5e902b45c270d);
+        
+    
+            var icon_2b9e0f67fa48dc7b69ddfbb89850efa5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "orange",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+  "iconSize": [15, 15],
+}
+            );
+        
+    
+        var popup_4821037a65de5dab6451c88251a0ad7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3d07f40ec9314782925ad6a20c3018a = $(`<div id="html_e3d07f40ec9314782925ad6a20c3018a" style="width: 100.0%; height: 100.0%;">             <b>ENEL (ENEL.MI)</b><br>             <b>Sector:</b> Utilities<br>             <b>País:</b> Italy<br>             <b>Capitalización:</b> $80.63 B<br>             <b>Variación (30d):</b> 3.29%             </div>`)[0];
+                popup_4821037a65de5dab6451c88251a0ad7f.setContent(html_e3d07f40ec9314782925ad6a20c3018a);
+            
+        
+
+        marker_acf2324abdcf8e205be63bbdc6ff8ce1.bindPopup(popup_4821037a65de5dab6451c88251a0ad7f)
+        ;
+
+        
+    
+    
+            marker_acf2324abdcf8e205be63bbdc6ff8ce1.bindTooltip(
+                `<div>
+                     ENEL.MI - Utilities
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_acf2324abdcf8e205be63bbdc6ff8ce1.setIcon(icon_2b9e0f67fa48dc7b69ddfbb89850efa5);
+            
+    
+            feature_group_b57e087bf59316844fc5e902b45c270d.addTo(map_57a1cc312fa6ba37c987f2651bc4bf22);
+        
+    
+            var layer_control_515f886b0b8d2a998e1b66f310379323_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_b95ad2db8efe9b7a5e84d02322e391c9,
+                },
+                overlays :  {
+                    "Sector: Technology" : feature_group_a16ba635d411db9b89e8512504aa561a,
+                    "Sector: Consumer Cyclical" : feature_group_defe78a6f66a2ee3fbe0e8e8b5a88a38,
+                    "Sector: Communication Services" : feature_group_1f7a72edd27dabdf4d9049d9866de25d,
+                    "Sector: Consumer Defensive" : feature_group_cd3a104ba5b098555be54cc32d0e9e80,
+                    "Sector: Financial Services" : feature_group_b4e605e8e868caf6423318c0f01a9f52,
+                    "Sector: Energy" : feature_group_02626627723f2e9e6e38fa3422d63f18,
+                    "Sector: Healthcare" : feature_group_1c7ad340cabdd0b50ad4c080a73f591a,
+                    "Sector: Industrials" : feature_group_61b18f6e3657d9713bf5483b87bb8755,
+                    "Sector: Basic Materials" : feature_group_46015e213fdfdef3839d2d58e024d411,
+                    "Sector: Utilities" : feature_group_b57e087bf59316844fc5e902b45c270d,
+                },
+            };
+            let layer_control_515f886b0b8d2a998e1b66f310379323 = L.control.layers(
+                layer_control_515f886b0b8d2a998e1b66f310379323_layers.base_layers,
+                layer_control_515f886b0b8d2a998e1b66f310379323_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_57a1cc312fa6ba37c987f2651bc4bf22);
+
+        
+</script>
+</html>
